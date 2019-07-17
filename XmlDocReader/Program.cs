@@ -1,4 +1,5 @@
-﻿using Autofac;
+﻿using System;
+using Autofac;
 using XmlDocReader.Services;
 using XmlDocReader.Services.Impl;
 
@@ -15,9 +16,15 @@ namespace XmlDocReader
             using (var scope = Container.BeginLifetimeScope())
             {
                 var parser = scope.Resolve<IXmlParser>();
-                
-                // todo: give it the xml file and get your result back
+
+                var filePath = "c:\\file.xml";
+
+                Console.WriteLine(parser.ReadRefText(filePath, "MWB"));
+                Console.WriteLine(parser.ReadRefText(filePath, "TRV"));
+                Console.WriteLine(parser.ReadRefText(filePath, "CAR"));
             }
+
+            Console.ReadKey();
         }
         
         private static void DiConfig()
