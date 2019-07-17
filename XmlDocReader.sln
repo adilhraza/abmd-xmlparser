@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocReader", "XmlDocReader\XmlDocReader.csproj", "{EBF9F06E-B8D3-4867-A042-BEE364187351}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocReader.Services", "XmlDocReader.Services\XmlDocReader.Services.csproj", "{23913C91-5148-411C-A3D4-D995A58D0643}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDocReader.Services.Tests", "XmlDocReader.Services.Tests\XmlDocReader.Services.Tests.csproj", "{1E6800A2-06BE-41BE-96DF-C94E889F6F30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBF9F06E-B8D3-4867-A042-BEE364187351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBF9F06E-B8D3-4867-A042-BEE364187351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBF9F06E-B8D3-4867-A042-BEE364187351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBF9F06E-B8D3-4867-A042-BEE364187351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23913C91-5148-411C-A3D4-D995A58D0643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23913C91-5148-411C-A3D4-D995A58D0643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23913C91-5148-411C-A3D4-D995A58D0643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23913C91-5148-411C-A3D4-D995A58D0643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E6800A2-06BE-41BE-96DF-C94E889F6F30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E6800A2-06BE-41BE-96DF-C94E889F6F30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E6800A2-06BE-41BE-96DF-C94E889F6F30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E6800A2-06BE-41BE-96DF-C94E889F6F30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
