@@ -1,6 +1,6 @@
 namespace XmlDocReader.Services
 {
-    public class XmlReader
+    public interface IXmlParser
     {
         
     }
