@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using System.IO;
+using System.Xml;
+using NUnit.Framework;
 using XmlDocReader.Services.Impl;
 
 namespace XmlDocReader.Services.Tests
@@ -27,13 +29,19 @@ namespace XmlDocReader.Services.Tests
         }
 
         [Test]
-        public void XmlParser_XmlFileNotExists_ReturnNull()
+        public void XmlParser_FileFoundButInvalidXml_ThrowXmlException()
         {
             var parser = new XmlParser();
 
-            var res = parser.ReadRefText("c:\\invalid-file.xml", "CAR");
-            
-            Assert.IsNull(res);
+            Assert.Throws<XmlException>(() => parser.ReadRefText("c:\\invalid-file.xml", "CAR"));
+        }
+
+        [Test]
+        public void XmlParser_XmlFileNotExists_ThrowFileNotFoundException()
+        {
+            var parser = new XmlParser();
+
+            Assert.Throws<FileNotFoundException>(() => parser.ReadRefText("c:\\not-found.xml", "CAR"));
         }
 
         [Test]
@@ -51,9 +59,9 @@ namespace XmlDocReader.Services.Tests
         {
             var parser = new XmlParser();
 
-            var res = parser.ReadRefText("c:\\file.xml", "CAR");
+            var res = parser.ReadRefText("c:\\file.xml", "MWB");
             
-            Assert.AreEqual(res, "71Q0019681");
+            Assert.AreEqual(res.Length, 9);
         }
     }
 }
